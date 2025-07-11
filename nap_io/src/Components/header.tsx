@@ -10,8 +10,7 @@ function Header() {
   const user = null; // Replace with actual user authentication logic
   return (
     <header
-      className="relative flex h-24 w-full items-center justify-between bg-popover px-3 sm:px-8"
-      style={{ boxShadow:shadow}}
+      className="relative flex h-24 w-full items-center justify-between bg-popover px-3 sm:px-8 header-shadow"
     >
       <Link className="flex flex-item gap-2" href="/">
         <Image

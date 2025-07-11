@@ -44,12 +44,9 @@ function LogOutButton() {
 
 export default LogOutButton;
 
-// function useToast() {
-//   return {
-//     toast: ({ title, description, variant }: { title: string; description?: string; variant?: string }) => {
-//       // Simple fallback: use alert for demonstration
-//       alert(`${title}${description ? `: ${description}` : ''}`);
-//     },
-//   };
-// }
+
+function useToast(): { toast: any; } {
+  throw new Error('Function not implemented.');
+}
+
 
