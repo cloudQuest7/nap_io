@@ -7,6 +7,7 @@ import { Input } from './ui/input';
 import { toast } from 'sonner';
 import { Button } from './ui/button';
 import { Link, Loader2 } from 'lucide-react';
+import { start } from 'repl';
 
 type Props = {
   type: 'login' | 'signup';
@@ -21,7 +22,22 @@ function AuthForm({type}:Props) {
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
-        console.log("form submitted", formData);
+       startTransition(async () => {
+        const email = formData.get('email') as string;
+        const password = formData.get('password') as string;
+        let errorMessage;
+        let title;
+        let description;
+        if (isLoginForm) {
+          errorMessage = (await loginAction(email, password)).errorMessage;
+          title = "Logged in";
+            description = "You have successfully logged in.";
+        } else {
+          errorMessage = (await signUpAction(email, password)).errorMessage;
+          title = "Signed up";
+          description = "Check your Email for Comfirmation link.";
+        }
+       });
     };
   return (
     <form onSubmit={handleSubmit}>
