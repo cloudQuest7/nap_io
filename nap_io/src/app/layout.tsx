@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/styles/globals.css";
 import { ThemeProvider } from "next-themes";
-import { Toaster } from "react-hot-toast";
+import { Toaster } from "sonner";
 import Header from "@/Components/header";
 
 export const metadata: Metadata = {
