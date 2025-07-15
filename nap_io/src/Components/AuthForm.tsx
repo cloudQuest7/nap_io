@@ -12,7 +12,7 @@ import { logInAction, signUpAction } from '@/actions/user';
 
 type Props = {
   type: 'login' | 'signup';
-}
+}//something like this
 
 function AuthForm({type}:Props) {
     const isLoginForm = type === 'login';
