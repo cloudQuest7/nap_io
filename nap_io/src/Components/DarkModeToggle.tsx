@@ -10,7 +10,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-}  from "@/Components/ui/dropdown-menu"
+}  from "@/Components/ui/dropdown-menu" //client component
 
 export function DarkModeToggle() {
   const { setTheme } = useTheme()
